@@ -18,7 +18,7 @@ public class OrderService {
 
     public void placeOrder(OrderRequest orderRequest) {
 
-        // to test use Mockito or WireMock
+        // to test use Mockito(do not send http request) or WireMock(sends http request)
         var isProductInStock = inventoryClient.isInStock(orderRequest.skuCode(), orderRequest.quantity());
 
         //map OrderRequest to Order object
