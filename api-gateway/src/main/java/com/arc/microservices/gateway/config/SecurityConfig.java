@@ -28,7 +28,7 @@ public class SecurityConfig {
     }
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguation configuration = new CorsConfiguration();
+        CorsConfiguration configuration = new CorsConfiguration();
         configuration.applyPermitDefaultValues();
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
