@@ -13,7 +13,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 @RequiredArgsConstructor
 public class ObservationConfig {
 
-    private final ConcurrentKafkaListenerContainerFactory<String, String> concurrentKafkaListenerContainerFactory;
+    private final ConcurrentKafkaListenerContainerFactory concurrentKafkaListenerContainerFactory;
 
     @PostConstruct
     public void setObservationForKafkaTemplate() {

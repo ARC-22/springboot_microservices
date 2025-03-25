@@ -28,6 +28,7 @@ public class RestClientConfig {
         RestClient restClient = RestClient.builder()
                 .baseUrl(inventoryServiceUrl)
                 //.requestFactory(getClientRequestFactory())
+                .observationRegistry(observationRegistry)
                 .build();
         var restClientAdapter = RestClientAdapter.create(restClient);
         var httpServiceProxyFactory = HttpServiceProxyFactory.builderFor(restClientAdapter).build();

@@ -201,8 +201,8 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
    * Creates a new OrderPlacedEvent RecordBuilder.
    * @return A new OrderPlacedEvent RecordBuilder
    */
-  public static com.arc.microservices.order.event.OrderPlacedEvent.Builder newBuilder() {
-    return new com.arc.microservices.order.event.OrderPlacedEvent.Builder();
+  public static OrderPlacedEvent.Builder newBuilder() {
+    return new OrderPlacedEvent.Builder();
   }
 
   /**
@@ -210,11 +210,11 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
    * @param other The existing builder to copy.
    * @return A new OrderPlacedEvent RecordBuilder
    */
-  public static com.arc.microservices.order.event.OrderPlacedEvent.Builder newBuilder(com.arc.microservices.order.event.OrderPlacedEvent.Builder other) {
+  public static OrderPlacedEvent.Builder newBuilder(OrderPlacedEvent.Builder other) {
     if (other == null) {
-      return new com.arc.microservices.order.event.OrderPlacedEvent.Builder();
+      return new OrderPlacedEvent.Builder();
     } else {
-      return new com.arc.microservices.order.event.OrderPlacedEvent.Builder(other);
+      return new OrderPlacedEvent.Builder(other);
     }
   }
 
@@ -223,11 +223,11 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
    * @param other The existing instance to copy.
    * @return A new OrderPlacedEvent RecordBuilder
    */
-  public static com.arc.microservices.order.event.OrderPlacedEvent.Builder newBuilder(com.arc.microservices.order.event.OrderPlacedEvent other) {
+  public static OrderPlacedEvent.Builder newBuilder(OrderPlacedEvent other) {
     if (other == null) {
-      return new com.arc.microservices.order.event.OrderPlacedEvent.Builder();
+      return new OrderPlacedEvent.Builder();
     } else {
-      return new com.arc.microservices.order.event.OrderPlacedEvent.Builder(other);
+      return new OrderPlacedEvent.Builder(other);
     }
   }
 
@@ -252,7 +252,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.arc.microservices.order.event.OrderPlacedEvent.Builder other) {
+    private Builder(OrderPlacedEvent.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.orderNumber)) {
         this.orderNumber = data().deepCopy(fields()[0].schema(), other.orderNumber);
@@ -276,7 +276,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
      * Creates a Builder by copying an existing OrderPlacedEvent instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.arc.microservices.order.event.OrderPlacedEvent other) {
+    private Builder(OrderPlacedEvent other) {
       super(SCHEMA$, MODEL$);
       if (isValidValue(fields()[0], other.orderNumber)) {
         this.orderNumber = data().deepCopy(fields()[0].schema(), other.orderNumber);
@@ -310,7 +310,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
       * @param value The value of 'orderNumber'.
       * @return This builder.
       */
-    public com.arc.microservices.order.event.OrderPlacedEvent.Builder setOrderNumber(java.lang.CharSequence value) {
+    public OrderPlacedEvent.Builder setOrderNumber(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.orderNumber = value;
       fieldSetFlags()[0] = true;
@@ -330,7 +330,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
       * Clears the value of the 'orderNumber' field.
       * @return This builder.
       */
-    public com.arc.microservices.order.event.OrderPlacedEvent.Builder clearOrderNumber() {
+    public OrderPlacedEvent.Builder clearOrderNumber() {
       orderNumber = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -350,7 +350,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
       * @param value The value of 'email'.
       * @return This builder.
       */
-    public com.arc.microservices.order.event.OrderPlacedEvent.Builder setEmail(java.lang.CharSequence value) {
+    public OrderPlacedEvent.Builder setEmail(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.email = value;
       fieldSetFlags()[1] = true;
@@ -370,7 +370,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
       * Clears the value of the 'email' field.
       * @return This builder.
       */
-    public com.arc.microservices.order.event.OrderPlacedEvent.Builder clearEmail() {
+    public OrderPlacedEvent.Builder clearEmail() {
       email = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -390,7 +390,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
       * @param value The value of 'firstName'.
       * @return This builder.
       */
-    public com.arc.microservices.order.event.OrderPlacedEvent.Builder setFirstName(java.lang.CharSequence value) {
+    public OrderPlacedEvent.Builder setFirstName(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.firstName = value;
       fieldSetFlags()[2] = true;
@@ -410,7 +410,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
       * Clears the value of the 'firstName' field.
       * @return This builder.
       */
-    public com.arc.microservices.order.event.OrderPlacedEvent.Builder clearFirstName() {
+    public OrderPlacedEvent.Builder clearFirstName() {
       firstName = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -430,7 +430,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
       * @param value The value of 'lastName'.
       * @return This builder.
       */
-    public com.arc.microservices.order.event.OrderPlacedEvent.Builder setLastName(java.lang.CharSequence value) {
+    public OrderPlacedEvent.Builder setLastName(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.lastName = value;
       fieldSetFlags()[3] = true;
@@ -450,7 +450,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
       * Clears the value of the 'lastName' field.
       * @return This builder.
       */
-    public com.arc.microservices.order.event.OrderPlacedEvent.Builder clearLastName() {
+    public OrderPlacedEvent.Builder clearLastName() {
       lastName = null;
       fieldSetFlags()[3] = false;
       return this;
